@@ -1,0 +1,166 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+008     lcdlat
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     oyun_durumu
+021-023 oyuncu1_zarlar
+024-026 oyuncu2_zarlar
+027     oyuncu1_toplam
+028     oyuncu2_toplam
+029     zar_sayisi
+02A     i
+02B     @TRIS_C
+02C     lcd_init.i
+02C     @PSTRINGCN7_647.P1
+02C     kazanan_led_efekti.k
+02C     buton_bekle.pin
+02C     led_efekti.j
+02C     @PSTRINGC7_647.@SCRATCH1
+02C     guncelle_lcd.@SCRATCH1
+02C     kazanan_mesaji.@SCRATCH1
+02C     MAIN.@SCRATCH1
+02D     @PRINTF_D_647.P1
+02D     @READBITA.P2
+02D     lcd_init.@SCRATCH1
+02D     led_efekti.@SCRATCH1
+02D     @PSTRINGC7_647.@SCRATCH2
+02D     @PSTRINGCN7_647.@SCRATCH1
+02D     buton_bekle.@SCRATCH1
+02D     MAIN.@SCRATCH2
+02E     zar_atisi.timer_value
+02E     @WRITEBITA.P1
+02E     @PRINTF_D_647.P2
+02E-02F @READBITA.P3
+02E     @PSTRINGC7_647.@SCRATCH3
+02E     @PSTRINGCN7_647.@SCRATCH2
+02F     @WRITEBITA.P1
+02F     zar_atisi.@SCRATCH1
+02F     @PSTRINGC7_647.@SCRATCH4
+02F     @PRINTF_D_647.@SCRATCH1
+02F     @PSTRINGCN7_647.@SCRATCH3
+030-031 @WRITEBITA.P1
+030     @PRINTF_D_647.@SCRATCH2
+030     @PSTRINGCN7_647.@SCRATCH4
+031     @PRINTF_D_647.@SCRATCH3
+032     @PRINTF_D_647.@SCRATCH4
+033     @DIV88.P1
+033     lcd_putc.c
+034     @DIV88.P1
+034     lcd_gotoxy.x
+034     @delay_ms1.P1
+035     lcd_gotoxy.y
+035     @DIV88.@SCRATCH1
+036     lcd_gotoxy.address
+037     lcd_gotoxy.@SCRATCH1
+038     lcd_send_byte.address
+039     lcd_send_byte.n
+03A     lcd_read_byte.low
+03A     lcd_send_byte.@SCRATCH1
+03B     lcd_read_byte.high
+03B     lcd_send_nibble.n
+03C     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const682.call
+00000D  @const684.call
+000015  @const685.call
+00001F  @const687.call
+000020  @const688.call
+000027  @const690.call
+000028  @const691.call
+00002E  @const697.call
+000034  @const701.call
+000035  @const702.call
+00003A  @const705.call
+00003F  @const706.call
+000040  @const707.call
+000048  @const708.call
+00004E  @const709.call
+000056  @const710.call
+00005C  @const711.call
+000061  @const712.call
+00006A  @const722.call
+00006B  @const723.call
+000072  @const724.call
+00007B  @const725.call
+00007C  @const726.call
+000083  @const727.call
+00008C  @delay_ms1
+0000A1  lcd_send_nibble
+0000AD  lcd_read_nibble
+0000B3  lcd_send_byte
+0000B9  lcd_read_byte
+0000F3  lcd_init
+000126  lcd_gotoxy
+000138  lcd_putc
+000164  @PSTRINGC7_647
+0001AF  tum_ledleri_sondur
+0001D0  @WRITEBITA
+0001F0  @READBITA
+000209  buton_bekle
+00021C  hosgeldiniz_mesaji
+00023D  baslama_mesaji
+00025E  tum_ledleri_yak
+000281  @DIV88
+000296  zar_atisi
+0002A2  @PRINTF_D_647
+0002F9  guncelle_lcd
+000356  led_efekti
+000383  @PSTRINGCN7_647
+0003D7  kazanan_mesaji
+00045A  kazanan_led_efekti
+0004AA  MAIN
+0004AA  @cinit1
+0004B8  @cinit2
+
+Project Directory:
+    C:\Users\user\Desktop\Dersler\Mikrodenetleyiciler\Mikrodenetleyiciler_Projesi\CCS\
+
+Project Files:
+    main.c                                                  [27-Eki-24 21:24  CRC=B1D37EE6]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [21-Haz-13 16:04  CRC=4E65664C]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [23-Aðu-12 09:01  CRC=D28E8746]
+
+Source signature=A555F3BE
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

@@ -1,0 +1,22 @@
+#include <16F877A.h>
+#fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+#use delay(clock=4M)
+#include <lcd.c>
+
+// LCD'yi baþlat ve RD pinlerinde kullan
+void main() {
+    // LCD'yi baþlat
+    lcd_init();
+
+    // LCD'yi temizle
+    lcd_putc("\f");
+
+    // Hoþgeldiniz mesajýný göster
+    lcd_gotoxy(1, 1);  // Ýlk satýr, ilk sütun
+    printf(lcd_putc, "Hosgeldiniz!");
+
+    while(TRUE) {
+        // LCD'deki mesaj sabit kalacak
+    }
+}
+

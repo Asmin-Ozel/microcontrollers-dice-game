@@ -1,0 +1,24 @@
+#include <16F877A.h>
+#fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+#use delay(clock=4M)
+#include <lcd.c>
+
+void main() {
+    lcd_init();  // LCD'yi baþlat
+    set_tris_a(0x01);  // RA0 (Start butonu) giriþ olarak ayarlandý
+
+    while(TRUE) {
+        if (input(PIN_A0) == 1) {  // RA0 butonuna basýlýp basýlmadýðýný kontrol et
+            lcd_putc("\f");
+            lcd_gotoxy(1, 1);
+            printf(lcd_putc, "Buton basildi!");
+        } else {
+            lcd_putc("\f");
+            lcd_gotoxy(1, 1);
+            printf(lcd_putc, "Buton basilmadi.");
+        }
+        delay_ms(500);  // 0.5 saniye gecikme ile durumu kontrol et
+    }
+}
+
+

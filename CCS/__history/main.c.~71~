@@ -1,0 +1,32 @@
+#include <16F877A.h>
+#fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+#use delay(clock=4M)
+#include <lcd.c>
+
+// Butona basýlana kadar bekle ve durumu kontrol et
+void buton_bekle(int pin) {
+    while(input(pin) == 0);  // Butonun basýlmasýný bekle
+    delay_ms(300);  // Debouncing için gecikme
+}
+
+void main() {
+    lcd_init();  // LCD'yi baþlat
+    lcd_putc("\f");  // LCD'yi temizle
+
+    // Hoþgeldiniz mesajýný göster
+    lcd_gotoxy(1, 1);
+    printf(lcd_putc, "Hosgeldiniz!");
+
+    // RA0 butonuna basýlmasýný bekle
+    buton_bekle(PIN_A0);  // RA0'a baðlý butonu kontrol et
+
+    // RA0 butonuna basýldýktan sonra mesajý deðiþtir
+    lcd_putc("\f");  // LCD'yi temizle
+    lcd_gotoxy(1, 1);
+    printf(lcd_putc, "Buton basildi!");
+
+    while(TRUE) {
+        // Sonsuz döngü, ekrandaki mesaj sabit kalýr
+    }
+}
+

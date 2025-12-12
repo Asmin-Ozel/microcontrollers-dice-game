@@ -1,0 +1,97 @@
+
+ROM used:   1458/8192 (18%)
+            1458/8192 (18%) including unused fragments
+
+            1.1 Average locations per line
+            5.8 Average locations per statement
+
+RAM used:   19/368 (5%) at main() level
+            34/368 (9%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  231   169  67  main.c
+  661     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+  456    84  33  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+----- -----
+ 1348   253 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   1    1             @delay_ms1
+0      8   1    0             @const629
+ Inline         3   596  5.9  lcd_read_byte
+0      6   0    0    59  4.2  lcd_read_nibble
+0     12   1    1   179  3.3  lcd_send_nibble
+0     64   4    3   460  4.7  lcd_send_byte
+0     51   3    2   667  5.9  lcd_init
+0     18   1    4   208  6.3  lcd_gotoxy
+0     44   3    1   354  4.7  lcd_putc
+0     12   1    2    82  2.8  zar_atisi
+0     21   1    3             @DIV88
+0     45   3    1   169  3.6  led_efekti
+0     32   2    6             @WRITEBITA
+ Inline         0   499  3.3  kazanan_led_efekti
+0     35   2    0   149  1.3  tum_ledleri_yak
+0     33   2    0   149  1.3  tum_ledleri_sondur
+0     33   2    0   132  1.6  baslama_mesaji
+0      1   0    0             @const682
+0     75   5    4             @PSTRINGC7_647
+0      8   1    0   165  3.3  @const684
+0     10   1    0             @const685
+0     33   2    0   165  3.3  hosgeldiniz_mesaji
+0      1   0    0   687  5.7  @const687
+0      7   0    0             @const688
+0     93   6    1   687  5.7  guncelle_lcd
+0      1   0    0             @const690
+0      6   0    0             @const691
+0     87   6    6             @PRINTF_D_647
+0      6   0    0             @const697
+0    211  14    1   723  3.3  kazanan_mesaji
+0      1   0    0             @const701
+0      5   0    0             @const702
+0     84   6    5             @PSTRINGCN7_647
+0      5   0    0             @const705
+0      1   0    0             @const706
+0      8   1    0             @const707
+0      6   0    0    61  1.9  @const708
+0      8   1    0             @const709
+0      6   0    0    61  1.9  @const710
+0      5   0    0    61  1.9  @const711
+0      9   1    0  2099  8.8  @const712
+0     19   1    2    61  1.9  buton_bekle
+0     25   2    5             @READBITA
+0    264  18    2  2099  8.8  MAIN
+0      1   0    0             @const722
+0      7   0    0             @const723
+0      9   1    0             @const724
+0      1   0    0             @const725
+0      7   0    0             @const726
+0      9   1    0             @const727
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               24
+    Statements              253
+    Comments                251
+    Volume (V)              17779
+    Difficulty (D)          93.0
+    Effort to implement (E) 1654100
+    Time to implement (T)   25 hours, 32 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   40
+    Maintainability (MI)    50
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1454  590  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+
